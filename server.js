@@ -33,7 +33,7 @@ app.post('/secret', (req, res) => {
           res.send('Inserted in to database')
         }
       })
-      db.close()
+      client.close()
     }
   })
 })
@@ -63,7 +63,7 @@ app.get('/:param*', (req, res) => {
           }
         })
       }
-      db.close()
+      client.close()
     }
   })
 })
